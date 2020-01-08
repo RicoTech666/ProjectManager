@@ -1,0 +1,30 @@
+.project-status {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.status-card {
+  width: 400px;
+	height: 150px;
+  font-family: serif, "Microsoft YaHei";
+  border-radius: 10px;
+}
+
+.all-tasks-card {
+	background-color: #31b48d;
+}
+
+.unsolved-card {
+	background-color: #38a1f2;
+}
+
+.pending-card {
+	background-color: #7538c7;
+}
+
+.solved-card {
+	background-color: #3b67a4;
+}
