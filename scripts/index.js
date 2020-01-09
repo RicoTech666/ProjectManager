@@ -50,4 +50,64 @@ function renderProjectData(data) {
 		return dataContent;
 	}, "");
 	changeStatusColor();
+	updateStatusSummary();
+}
+
+function getStatusSummary() {
+	let projectStatus = document.getElementsByClassName("status-col");
+	let activeStatus = "ACTIVE";
+	let pendingStatus = "PENDING";
+	let closedStatus = "CLOSED";
+	let statusArr = Array.from(projectStatus).reduce(
+		(summary, elem) => {
+			switch (elem.innerHTML) {
+				case activeStatus:
+					summary[0]++;
+					break;
+				case pendingStatus:
+					summary[1]++;
+					break;
+				case closedStatus:
+					summary[2]++;
+					break;
+				default:
+					break;
+			}
+			return summary;
+		},
+		[0, 0, 0]
+	);
+	statusArr.unshift(sumOfArr(statusArr));
+	return statusArr;
+}
+
+function sumOfArr(arr) {
+	return arr.reduce((sum, elem) => {
+		return (sum += elem);
+	});
+}
+
+function getPercentageSummary() {
+	let statusSummary = getStatusSummary();
+	let percentageSummary = [];
+	for (let i = 0; i < statusSummary.length; i++) {
+		if (i >= 1) {
+			let percentageVal = (100 * statusSummary[i]) / statusSummary[0];
+			percentageSummary.push(percentageVal.toString() + "%");
+		}
+	}
+	return percentageSummary;
+}
+
+function updateStatusSummary() {
+	let statusSummary = getStatusSummary();
+	let percentageSummary = getPercentageSummary();
+	let summaryNum = document.getElementsByClassName("summary-num");
+	let summaryPercentage = document.getElementsByClassName("percentage");
+	Array.from(summaryNum).forEach((summaryNumElem, index) => {
+		summaryNumElem.innerHTML = statusSummary[index];
+	});
+	Array.from(summaryPercentage).forEach((summaryPercentageElem, index) => {
+		summaryPercentageElem.innerHTML = percentageSummary[index];
+	});
 }
