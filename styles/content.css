@@ -1,6 +1,7 @@
 table {
 	width: 100%;
 	border-collapse: collapse;
+	font-size: 20px;
 	text-align: left;
 }
 
@@ -28,10 +29,31 @@ th:nth-of-type(3) {
 th:nth-of-type(4) {
 	width: 15%;
 }
+
 th:nth-of-type(5) {
 	width: 10%;
 }
 
 td {
-	padding: 20px;
+	padding: 0 20px 0;
+	margin: 20px 0;
+}
+
+tbody tr {
+	border-bottom: 1px solid #dcdee3;
+}
+
+.project-description {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+.project-description:hover {
+	overflow: initial;
+	text-overflow: initial;
+	-webkit-line-clamp: 5;
 }
