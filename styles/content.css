@@ -43,7 +43,7 @@ tbody tr {
 	border-bottom: 1px solid #dcdee3;
 }
 
-.project-description {
+.description-col {
 	display: -webkit-box;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -52,7 +52,7 @@ tbody tr {
 	-webkit-line-clamp: 2;
 }
 
-.project-description:hover {
+.description-col:hover {
 	overflow: initial;
 	text-overflow: initial;
 	-webkit-line-clamp: 5;
