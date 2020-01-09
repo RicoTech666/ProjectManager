@@ -1,16 +1,80 @@
+body {
+	margin: 20px 20px 0;
+}
+
 .project-status {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
-	width: 90%;
-	margin: 0 auto;
+	width: 100%;
+	margin: 20px auto;
+	font-family: serif, "Microsoft YaHei";
 }
 
 .status-card {
-  width: 400px;
-	height: 150px;
-  font-family: serif, "Microsoft YaHei";
-  border-radius: 10px;
+	position: relative;
+	height: 140px;
+	color: white;
+	border-radius: 8px;
+}
+
+.summary-left {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.summary-left span:nth-of-type(1) {
+	display: block;
+	position: relative;
+	left: 15%;
+	top: 20%;
+	font-size: 14px;
+}
+
+.summary-left span:nth-of-type(2) {
+	display: block;
+	position: relative;
+	left: 15%;
+	top: 35%;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 30px;
+}
+
+.summary-right {
+	float: right;
+	width: 50%;
+	height: 100%;
+}
+
+.summary-right .iconfont {
+	position: relative;
+	left: 40%;
+	top: 15%;
+	font-size: 100px;
+	opacity: 0.3;
+}
+
+.summary-right .realtime {
+	position: relative;
+	top: -40px;
+	left: 45px;
+	display: inline-block;
+	padding: 4px;
+	font-size: 12px;
+	border-radius: 3px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.summary-right .percentage {
+	position: absolute;
+	left: 77%;
+	bottom: 25%;
+	font-size: 30px;
+	font-weight: 500;
+	font: "Microsoft Yahei";
+	line-height: 30px;
 }
 
 .all-tasks-card {
