@@ -44,7 +44,7 @@ function renderProjectData(data) {
     <td class="description-col">${curData.description}</td>
     <td>${curData.endTime}</td>
     <td class="status-col">${curData.status}</td>
-    <td><button class="delete-btn" onclick="openDialogBox()">删除</button></td>
+    <td><button class="delete-btn" onclick="deleteItemData()">删除</button></td>
   </tr>
   <tr>`;
 		return dataContent;
@@ -120,4 +120,33 @@ function openDialogBox() {
 function closeDialogBox() {
 	let dialogUnit = document.getElementsByClassName("dialog-unit")[0];
 	dialogUnit.style.display = "none";
+}
+var projectId;
+function confirmBox() {
+	deleteItemJsonData(projectId);
+	closeDialogBox();
+}
+
+function deleteItemData() {
+	openDialogBox();
+	projectId = event.target.parentElement.parentElement.getAttribute("id");
+}
+
+function deleteItemJsonData(id) {
+	ajax({
+		url: root + "/" + id,
+		method: "DELETE",
+		success: function(response) {
+			deleteItemDisplay(id);
+		},
+		fail: function(error) {
+			console.log("request fail!");
+		},
+	});
+}
+
+function deleteItemDisplay(id) {
+	let projectData = document.getElementsByClassName("project-data")[0];
+	let itemToBeRemoved = document.getElementById(`${id}`);
+	projectData.removeChild(itemToBeRemoved);
 }
