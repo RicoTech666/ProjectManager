@@ -16,7 +16,7 @@ function changeStatusColor() {
 				elem.style.color = "#ee706d";
 				break;
 			case closedStatus:
-				elem.style.color = "f7da47";
+				elem.style.color = "#f7da47";
 				break;
 			default:
 				break;
