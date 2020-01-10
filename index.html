@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Project Manager</title>
-		<link rel="stylesheet" type="text/css" media="screen" href="./styles/top-cards.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="./styles/iconfont.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="./styles/top-cards.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="./styles/content.css" />
 	</head>
 
@@ -15,7 +15,7 @@
 			<div class="status-card all-tasks-card">
 				<div class="summary-left">
 					<span>所有任务</span>
-					<span class="summary-num">3,814</span>
+					<span class="summary-num"></span>
 				</div>
 				<div class="summary-right">
 					<span class="icon iconfont">&#xe60c;</span>
@@ -25,34 +25,34 @@
 			<div class="status-card unsolved-card">
 				<div class="summary-left">
 					<span>未解决</span>
-					<span class="summary-num">2,305</span>
+					<span class="summary-num"></span>
 				</div>
 				<div class="summary-right">
 					<span class="icon iconfont">&#xe651;</span>
 					<div class="realtime">实时</div>
-					<div class="percentage">60%</div>
+					<div class="percentage"></div>
 				</div>
 			</div>
 			<div class="status-card pending-card">
 				<div class="summary-left">
 					<span>处理中</span>
-					<span class="summary-num">3,84</span>
+					<span class="summary-num"></span>
 				</div>
 				<div class="summary-right">
 					<span class="icon iconfont">&#xe615;</span>
 					<div class="realtime">实时</div>
-					<div class="percentage">10%</div>
+					<div class="percentage"></div>
 				</div>
 			</div>
 			<div class="status-card solved-card">
 				<div class="summary-left">
 					<span>已解决</span>
-					<span class="summary-num">1,152</span>
+					<span class="summary-num"></span>
 				</div>
 				<div class="summary-right">
 					<span class="icon iconfont">&#xe614;</span>
 					<div class="realtime">实时</div>
-					<div class="percentage">30%</div>
+					<div class="percentage"></div>
 				</div>
 			</div>
 		</div>
@@ -69,6 +69,19 @@
 				</thead>
 				<tbody class="project-data"></tbody>
 			</table>
+		</div>
+		<div class="dialog-unit">
+			<div id="dialog-box">
+				<span class="iconfont icon-question-mark">&#xe60a;</span>
+				<span class="iconfont icon-close">&#xe600;</span>
+				<div class="dialog-title">
+					<h1>提示</h1>
+					<p>确认删除该项目吗？</p>
+				</div>
+				<input type="button" value="确认" id="btn-yes" class="confirm-btn" />
+				<input type="button" value="取消" id="btn-no" class="confirm-btn" />
+			</div>
+			<div class="mask"></div>
 		</div>
 	</body>
 	<script src="./scripts/ajax.js"></script>

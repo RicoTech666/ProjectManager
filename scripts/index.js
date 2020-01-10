@@ -44,7 +44,7 @@ function renderProjectData(data) {
     <td class="description-col">${curData.description}</td>
     <td>${curData.endTime}</td>
     <td class="status-col">${curData.status}</td>
-    <td></td>
+    <td><button class="delete-btn">删除</button></td>
   </tr>
   <tr>`;
 		return dataContent;
