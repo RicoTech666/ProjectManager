@@ -1,3 +1,7 @@
+const root = " http://localhost:3000/projects";
+var projectId;
+getProjectData();
+
 function changeStatusColor() {
 	let projectStatus = document.getElementsByClassName("status-col");
 	let activeStatus = "ACTIVE";
@@ -19,9 +23,6 @@ function changeStatusColor() {
 		}
 	});
 }
-
-const root = " http://localhost:3000/projects";
-getProjectData();
 
 function getProjectData() {
 	ajax({
@@ -122,7 +123,7 @@ function closeDialogBox() {
 	let dialogUnit = document.getElementsByClassName("dialog-unit")[0];
 	dialogUnit.style.display = "none";
 }
-var projectId;
+
 function confirmBox() {
 	deleteItemJsonData(projectId);
 	closeDialogBox();
