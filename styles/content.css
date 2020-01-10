@@ -57,3 +57,116 @@ tbody tr {
 	text-overflow: initial;
 	-webkit-line-clamp: 5;
 }
+
+.delete-btn {
+	height: 35px;
+	width: 60px;
+	border: 0;
+	border-radius: 4px;
+	font-size: 17px;
+	color: white;
+	background-color: #ee706d;
+}
+
+.delete-btn:hover {
+	opacity: 0.8;
+}
+
+.delete-btn:focus {
+	outline: none;
+}
+
+.dialog-unit {
+	display: none;
+}
+
+#dialog-box {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 340px;
+	height: 145px;
+	z-index: 2;
+	border-radius: 5px;
+	background: white;
+}
+
+.icon-question-mark {
+	position: absolute;
+	left: 4%;
+	top: 25%;
+	font-size: 24px;
+	color: #f1c826;
+}
+
+.icon-close {
+	position: absolute;
+	right: 5%;
+	top: 10%;
+	font-size: 16px;
+}
+
+.icon-close:hover {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.dialog-title {
+	position: absolute;
+	left: 14%;
+	top: 15%;
+}
+
+.dialog-title h1 {
+	font-size: 20px;
+	line-height: 24px;
+	color: #333;
+}
+
+.dialog-title p {
+	margin-top: 8px;
+	font-size: 14px;
+	color: #666;
+}
+
+#btn-yes {
+	position: absolute;
+	right: 22%;
+	bottom: 5%;
+	color: white;
+	background: #3080fe;
+}
+
+#btn-no {
+	position: absolute;
+	right: 5%;
+	bottom: 5%;
+	background: white;
+}
+
+.confirm-btn {
+	width: 50px;
+	height: 30px;
+	border: 1px solid rgba(165, 162, 162, 0.3);
+	border-radius: 2px;
+}
+
+.confirm-btn:focus {
+	outline: none;
+}
+
+.confirm-btn:hover {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.3);
+}
