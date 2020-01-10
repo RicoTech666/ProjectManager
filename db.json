@@ -1,13 +1,6 @@
 {
   "projects": [
     {
-      "id": 4,
-      "name": "retrofit",
-      "endTime": "2018-12-04",
-      "description": "Retrofit 是 Square 公司出品的 HTTP 请求库, 同时是 Square 是最早开源项目之一, Retrofit 是目前 Android 最流行的 Http Client 库之一, 目前版本是 Retrofit2.0 Beta4, 越来越多 Android 开发者开始使用这个请求库了",
-      "status": "ACTIVE"
-    },
-    {
       "id": 5,
       "name": "okhttp",
       "endTime": "2018-12-05",
