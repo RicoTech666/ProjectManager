@@ -4,9 +4,9 @@ getProjectData();
 
 function changeStatusColor() {
 	let projectStatus = document.getElementsByClassName("status-col");
-	let activeStatus = "ACTIVE";
-	let pendingStatus = "PENDING";
-	let closedStatus = "CLOSED";
+	const activeStatus = "ACTIVE";
+	const pendingStatus = "PENDING";
+	const closedStatus = "CLOSED";
 	Array.from(projectStatus).forEach(elem => {
 		switch (elem.innerHTML) {
 			case activeStatus:
@@ -56,9 +56,9 @@ function renderProjectData(data) {
 
 function getStatusSummary() {
 	let projectStatus = document.getElementsByClassName("status-col");
-	let activeStatus = "ACTIVE";
-	let pendingStatus = "PENDING";
-	let closedStatus = "CLOSED";
+	const activeStatus = "ACTIVE";
+	const pendingStatus = "PENDING";
+	const closedStatus = "CLOSED";
 	let statusArr = Array.from(projectStatus).reduce(
 		(summary, elem) => {
 			switch (elem.innerHTML) {
