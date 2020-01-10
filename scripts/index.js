@@ -93,6 +93,7 @@ function getPercentageSummary() {
 	for (let i = 0; i < statusSummary.length; i++) {
 		if (i >= 1) {
 			let percentageVal = (100 * statusSummary[i]) / statusSummary[0];
+			percentageVal = percentageVal.toFixed(2);
 			percentageSummary.push(percentageVal.toString() + "%");
 		}
 	}
