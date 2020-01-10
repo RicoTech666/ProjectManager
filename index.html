@@ -73,13 +73,13 @@
 		<div class="dialog-unit">
 			<div id="dialog-box">
 				<span class="iconfont icon-question-mark">&#xe60a;</span>
-				<span class="iconfont icon-close">&#xe600;</span>
+				<span class="iconfont icon-close" onclick="closeDialogBox()">&#xe600;</span>
 				<div class="dialog-title">
 					<h1>提示</h1>
 					<p>确认删除该项目吗？</p>
 				</div>
 				<input type="button" value="确认" id="btn-yes" class="confirm-btn" />
-				<input type="button" value="取消" id="btn-no" class="confirm-btn" />
+				<input type="button" value="取消" id="btn-no" class="confirm-btn" onclick="closeDialogBox()" />
 			</div>
 			<div class="mask"></div>
 		</div>

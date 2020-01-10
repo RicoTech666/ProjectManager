@@ -44,7 +44,7 @@ function renderProjectData(data) {
     <td class="description-col">${curData.description}</td>
     <td>${curData.endTime}</td>
     <td class="status-col">${curData.status}</td>
-    <td><button class="delete-btn">删除</button></td>
+    <td><button class="delete-btn" onclick="openDialogBox()">删除</button></td>
   </tr>
   <tr>`;
 		return dataContent;
@@ -110,4 +110,14 @@ function updateStatusSummary() {
 	Array.from(summaryPercentage).forEach((summaryPercentageElem, index) => {
 		summaryPercentageElem.innerHTML = percentageSummary[index];
 	});
+}
+
+function openDialogBox() {
+	let dialogUnit = document.getElementsByClassName("dialog-unit")[0];
+	dialogUnit.style.display = "block";
+}
+
+function closeDialogBox() {
+	let dialogUnit = document.getElementsByClassName("dialog-unit")[0];
+	dialogUnit.style.display = "none";
 }
